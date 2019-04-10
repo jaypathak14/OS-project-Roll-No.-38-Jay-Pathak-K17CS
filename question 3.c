@@ -3,19 +3,19 @@
 
 int main()
 {
-  int time,bt[10],at[10],sum_bt=0,smallest,rem,n,i,rt[10];
-  int sumt=0,sumw=0;
-  printf("no of processes : ");
-  scanf("%d",&n);rem=n;
-  for(i=0;i<n;i++)
+  int time,bt[10],at[10],sum_bt=0,smallest,rem,n,i,rt[10];//declaring the varialbe
+  int sumt=0,sumw=0;//declaring the varialbe
+  printf("no of processes : ");//will ask the no. of processes
+  scanf("%d",&n);rem=n;//take the input of processes
+  for(i=0;i<n;i++)//ask the user to enter the details for each details
   {
-    printf("arrival time for process P%d : ",i+1);
-    scanf("%d",&at[i]);
-    printf("burst time for process P%d : ",i+1);
-    scanf("%d",&bt[i]);rt[i]=bt[i];
+    printf("arrival time for process P%d : ",i+1);//ask to enter arrival time
+    scanf("%d",&at[i]);//take the input for arrival time
+    printf("burst time for process P%d : ",i+1);//ask to enter burst time
+    scanf("%d",&bt[i]);rt[i]=bt[i];//take the input for arrival time
    
   }
-  rt[9]=bt[9]=9999;
+  rt[9]=bt[9]=9999;               
   for(time=0;rem!=0;time++)
   {
     smallest=9;
@@ -34,7 +34,7 @@ rem--;
     
    
   }}
-  printf("\n\n average waiting time = %f",sumw*1.0/n);
-  printf("\n\n average turnaround time = %f",sumt*1.0/n);
+  printf("\n\n average turnaround time = %f",sumw*1.0/n);
+  printf("\n\n average waiting time = %f",sumt*1.0/n);
   return 0;
 }
